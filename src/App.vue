@@ -47,16 +47,29 @@ li {
 
 html {
   width: 100%;
+  height: 100%;
 }
 
 body {
-  width: 100%;
   height: 100%;
+  margin: 0;
   background-color: var(--bg-color);
   overflow-x: hidden;
   font-family: 'Cormorant', 'Lato', serif, sans-serif;
+  line-height: 1.2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: 0.25px;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+
+#app {
+  min-height: calc(100vh - 50px);
 }
 
 .container {

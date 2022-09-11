@@ -1,6 +1,24 @@
 <template>
-    <div class="work">
-      <h1>This is a work page</h1>
+  <div class="work">
+    <div class="container">
+    <h1>WORK</h1>
     </div>
-  </template>
-  
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Work',
+}
+</script>
+
+<style>
+.work {
+  width: 100%;
+}
+
+.work .container {
+  color: var(--main-color);
+  padding: 80px 0;
+}
+</style>

@@ -4,17 +4,17 @@
       <div class="logo"><img src="../assets/Logo.svg" alt="MITAMA MASUDA" class="logo-img"></div>
       <!-- Hamburger menu -->
       <div class="hamburger">
-        <input type="checkbox" class="hamburger-switch" />
+        <input type="checkbox" class="hamburger-switch" v-model="checked"/>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <nav class="hamburger-menu">
           <div class="logo-light"><img src="../assets/Logo_light.svg" alt="MITAMA MASUDA" class="logo-img"></div>
           <ul>
-            <li><router-link to="/">Home</router-link></li>
-            <li><router-link to="/about">About</router-link></li>
-            <li><router-link to="/work">Work</router-link></li>
-            <li><router-link to="/contact">Contact</router-link></li>
+            <li><router-link to="/" @click="checked=false">Home</router-link></li>
+            <li><router-link to="/about" @click="checked=false">About</router-link></li>
+            <li><router-link to="/work" @click="checked=false">Work</router-link></li>
+            <li><router-link to="/contact" @click="checked=false">Contact</router-link></li>
           </ul>
           <div class="switch">
             <div class="switch-icon sun"><img src="../assets/sun.svg" alt="light"></div>
@@ -30,7 +30,12 @@
 
 <script>
 export default {
-  name: 'GlobalHeader'
+  name: 'GlobalHeader',
+  data() {
+    return {
+      checked: false
+    }
+  }
 }
 </script>
 
