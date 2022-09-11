@@ -2,7 +2,7 @@
   <div class="about">
     <div class="container">
       <h2>ABOUT ME</h2>
-      <div class="about-img"><img src="../assets/About_img.jpg"></div>
+      <div class="about-img"><img src="../assets/about_img.jpg"></div>
       <h3>Mitama Masuda</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharet
         ratellus et sollicitudin suscipit. Pellentesque vel consectetur sem, sed

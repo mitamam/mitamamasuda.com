@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="container">
-      <div class="logo"><img src="../assets/Logo.svg" alt="MITAMA MASUDA" class="logo-img"></div>
+      <div class="logo"><img src="../assets/logo.svg" alt="MITAMA MASUDA" class="logo-img"></div>
       <!-- Hamburger menu -->
       <div class="hamburger">
         <input type="checkbox" class="hamburger-switch" v-model="checked"/>
@@ -9,7 +9,7 @@
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <nav class="hamburger-menu">
-          <div class="logo-light"><img src="../assets/Logo_light.svg" alt="MITAMA MASUDA" class="logo-img"></div>
+          <div class="logo-light"><img src="../assets/logo_light.svg" alt="MITAMA MASUDA" class="logo-img"></div>
           <ul>
             <li><router-link to="/" @click="checked=false">Home</router-link></li>
             <li><router-link to="/about" @click="checked=false">About</router-link></li>
@@ -53,7 +53,7 @@ export default {
 }
 
 .dark-mode .logo {
-  content: url(../assets/Logo_light.svg);
+  content: url(../assets/logo_light.svg);
 }
 
 /* Hamburger menu */
