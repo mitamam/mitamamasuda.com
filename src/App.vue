@@ -55,10 +55,21 @@ body {
   margin: 0;
   background-color: var(--bg-color);
   overflow-x: hidden;
-  font-family: 'Cormorant', 'Lato', serif, sans-serif;
+  font-family: 'Cormorant', serif;
   line-height: 1.2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  margin: 0 2rem;
+  overflow: hidden;
 }
 
 h2 {
@@ -68,12 +79,8 @@ h2 {
   margin-bottom: 2rem;
 }
 
-#app {
-  min-height: calc(100vh - 50px);
+p {
+  font-family: 'Lato', sans-serif;
 }
 
-.container {
-  margin: 0 1rem;
-  overflow: hidden;
-}
 </style>

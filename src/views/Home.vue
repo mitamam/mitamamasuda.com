@@ -25,6 +25,7 @@ export default {
 <style>
 .home {
   width: 100%;
+  flex: 1;
 }
 
 .home .container {
@@ -49,6 +50,7 @@ export default {
 
 .home p {
   font-size: 0.85rem;
+  font-family: 'Cormorant', serif;
 }
 
 .home .subheading + p {
@@ -66,7 +68,7 @@ export default {
   position: fixed;
   z-index: 2;
   bottom: 2rem;
-  right: 1rem;
+  right: 2rem;
   width: 70px;
   height: 70px;
   padding: 11px 6px;
@@ -78,5 +80,6 @@ export default {
   font-size: 0.6rem;
   letter-spacing: 1px;
   font-weight: bold;
+  font-family: 'Cormorant', serif;
 }
 </style>
