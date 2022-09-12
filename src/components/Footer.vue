@@ -29,4 +29,8 @@
   background-color: var(--main-color);
   margin-right: 0.5rem;
 }
+
+.footer p {
+  font-family: 'Cormorant', serif;
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="container">
-      <div class="logo"><img src="../assets/logo.svg" alt="MITAMA MASUDA" class="logo-img"></div>
+      <div class="logo"><router-link to="/"><img src="../assets/logo.svg" alt="MITAMA MASUDA" class="logo-img"></router-link></div>
       <!-- Hamburger menu -->
       <div class="hamburger">
         <input type="checkbox" class="hamburger-switch" v-model="checked"/>
@@ -61,7 +61,7 @@ export default {
   display: block;
   position: absolute;
   top: 4rem;
-  right: 1rem;
+  right: 2rem;
   z-index: 1;
   user-select: none;
 }
@@ -124,7 +124,7 @@ export default {
   margin: -5.7rem 0 0 0;
   padding: 2rem;
   padding-top: 50px;
-  right: -16px;
+  right: -2rem;
   background-color: #40362D;
   -webkit-font-smoothing: antialiased;
 

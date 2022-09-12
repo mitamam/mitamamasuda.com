@@ -23,6 +23,7 @@ export default {
 <style>
 .about {
   width: 100%;
+  flex: 1;
 }
 
 .about .container {
@@ -34,7 +35,7 @@ export default {
   margin: 0 auto;
   padding: 0 1rem;
   margin-bottom: 4rem;
-  max-width: 350px;
+  max-width: 400px;
   text-align: center;
 }
 
