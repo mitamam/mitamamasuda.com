@@ -38,13 +38,19 @@ export default {
   font-size: 2.5rem;
   letter-spacing: 0.25px;
   font-weight: normal;
+  z-index: 0;
 }
 
 .home .subheading {
-  margin-top: -1.2rem;
+  width: 14rem;
+  margin: 0 auto;
+  margin-top: -1.8rem;
+  z-index: 1;
 }
 
 .home .subheading > img {
+  width: 100%;
+  height: 100%;
   display: inline-block;
 }
 
@@ -69,11 +75,14 @@ export default {
   z-index: 2;
   bottom: 2rem;
   right: 2rem;
-  width: 70px;
-  height: 70px;
-  padding: 11px 6px;
+  width: 4.3rem;
+  height: 4.3rem;
+  padding: .8rem .4rem;
   border: 1px solid var(--main-color);
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bubble p {
@@ -81,5 +90,15 @@ export default {
   letter-spacing: 1px;
   font-weight: bold;
   font-family: 'Cormorant', serif;
+}
+
+@media only screen and (min-width: 600px) {
+  .home .subheading {
+    width: 18rem;
+  }
+
+  .home li {
+    font-size: 40px;
+  }
 }
 </style>

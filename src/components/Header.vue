@@ -9,18 +9,20 @@
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <nav class="hamburger-menu">
-          <div class="logo-light"><img src="../assets/logo_light.svg" alt="MITAMA MASUDA" class="logo-img"></div>
-          <ul>
-            <li><router-link to="/" @click="checked=false">Home</router-link></li>
-            <li><router-link to="/about" @click="checked=false">About</router-link></li>
-            <li><router-link to="/work" @click="checked=false">Work</router-link></li>
-            <li><router-link to="/contact" @click="checked=false">Contact</router-link></li>
-          </ul>
-          <div class="switch">
-            <div class="switch-icon sun"><img src="../assets/sun.svg" alt="light"></div>
-            <input type="checkbox" id="dark-mode-toggle">
-            <label for="dark-mode-toggle"></label>
-            <div class="switch-icon moon"><img src="../assets/moon.svg" alt="dark"></div>
+          <div class="container">
+            <div class="logo-light"><img src="../assets/logo_light.svg" alt="MITAMA MASUDA" class="logo-img"></div>
+            <ul>
+              <li><router-link to="/" @click="checked=false">Home</router-link></li>
+              <li><router-link to="/about" @click="checked=false">About</router-link></li>
+              <li><router-link to="/work" @click="checked=false">Work</router-link></li>
+              <li><router-link to="/contact" @click="checked=false">Contact</router-link></li>
+            </ul>
+            <div class="switch">
+              <div class="switch-icon sun"><img src="../assets/sun.svg" alt="light"></div>
+              <input type="checkbox" id="dark-mode-toggle">
+              <label for="dark-mode-toggle"></label>
+              <div class="switch-icon moon"><img src="../assets/moon.svg" alt="dark"></div>
+            </div>
           </div>
         </nav>
       </div>
@@ -41,10 +43,10 @@ export default {
 
 <style>
 .header {
-  padding-top: 3rem;
+  padding-top: 48px;
 }
 
-.header .container {
+.header > .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,8 +62,8 @@ export default {
 .hamburger {
   display: block;
   position: absolute;
-  top: 4rem;
-  right: 2rem;
+  top: 72px;
+  right: 32px;
   z-index: 1;
   user-select: none;
 }
@@ -118,18 +120,20 @@ export default {
 }
 
 .hamburger-menu {
-  position: absolute;
   width: 100vw;
   height: 100vh;
-  margin: -5.7rem 0 0 0;
-  padding: 2rem;
-  padding-top: 50px;
-  right: -2rem;
+  position: absolute;
+  margin: -99px 0 0 0;
+  top: 0;
+  right: -32px;
+  
+  padding-top: 48px;
   background-color: #40362D;
   -webkit-font-smoothing: antialiased;
 
   transform-origin: 0% 0%;
-  transform: translate(100%, 0);
+  /* transform: translate(100%, 0); */
+  transform: translateX(100%);
 
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
@@ -229,11 +233,31 @@ export default {
   height: 100%;
 }
 
-@media screen and (max-width: var(--tablet-breakpoint)) {
+@media only screen and (min-width: 600px) {
+  .hamburger {
+    right: 64px;
+  }
+
   .hamburger-menu {
-    transform: none;
-    opacity: 0;
-    transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    right: -64px;
+  }
+}
+
+@media only screen and (min-width: 905px) {
+  .hamburger {
+    right: calc((100vw - 840px) / 2);
+  }
+  .hamburger-menu {
+    right: calc(0px - (100vw - 840px) / 2);
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .hamburger {
+    right: calc((100vw - 1040px) / 2);
+  }
+  .hamburger-menu {
+    right: calc(0px - (100vw - 1040px) / 2);
   }
 }
 

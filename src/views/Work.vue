@@ -52,13 +52,13 @@ export default {
 
 .work .container {
   color: var(--main-color);
-  padding: 3rem 0;
+  padding: 48px 0;
 }
 
 .work-heading {
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
 }
 
 .work span {
@@ -72,9 +72,15 @@ export default {
   margin-left: 1.5rem;
 }
 
+.work ul {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  row-gap: 32px;
+}
+
 .work li {
   padding: 1rem;
-  margin-bottom: 2rem;
   border: 1px solid var(--main-color);
 }
 
@@ -86,7 +92,7 @@ export default {
 }
 
 .work li > p {
-  font-size: 0.9rem;
+  font-size: 14px;
   max-width: calc(100% - 3rem);
 }
 
@@ -100,6 +106,40 @@ export default {
 
 .work .fa-github {
   font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .work .container {
+    padding: 64px 0;
+  }
+
+  .work .work-heading {
+    margin-bottom: 48px;
+  }
+
+  .work li {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .work li > h4 {
+    font-size: 32px;
+  }
+
+  .work li > p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 905px) {
+  .work ul {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+  }
+
+  .work li {
+    margin: 0;
+  }
 }
 
 </style>
