@@ -32,5 +32,7 @@
 
 .footer p {
   font-family: 'Cormorant', serif;
+  letter-spacing: 1.25px;
+  font-size: 0.6rem;
 }
 </style>

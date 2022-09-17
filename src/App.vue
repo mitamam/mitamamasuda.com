@@ -21,7 +21,7 @@ export default {
   --main-color: #40362D;
   --bg-color: #F0E8E0;
 
-  --mobile-breakpoint: 599px;
+  --mobile-breakpoint: 600px;
   --tablet-breakpoint: 904px;
   --desktop-breakpoint: 905px;
 }
@@ -48,6 +48,7 @@ li {
 html {
   width: 100%;
   height: 100%;
+  font-size: calc(1rem + ((1vw - 0.234375rem) * 2.0657));
 }
 
 body {
@@ -68,19 +69,49 @@ body {
 }
 
 .container {
-  margin: 0 2rem;
+  margin: 0 32px;
   overflow: hidden;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 40px;
   letter-spacing: 0.25px;
   font-weight: normal;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
 }
 
 p {
   font-family: 'Lato', sans-serif;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    margin: 0 64px;
+  }
+
+  h2 {
+    font-size: 48px;
+    margin-bottom: 48px;
+  }
+}
+
+@media only screen and (min-width: 905px) {
+  .container {
+    max-width: 840px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 64px;
+    margin-bottom: 64px;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .container {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
 }
 
 </style>
