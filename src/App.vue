@@ -1,15 +1,28 @@
 <template>
+  <loading v-show="loading"></loading>
   <global-header/>
   <router-view/>
   <global-footer/>
 </template>
 
 <script>
+import Loading from '@/components/Loading'
 import GlobalHeader from '@/components/Header'
 import GlobalFooter from '@/components/Footer'
 
 export default {
+  data() {
+    return {
+      loading: true,
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 1000)
+  },
   components: {
+    Loading,
     GlobalHeader,
     GlobalFooter
   }
@@ -20,10 +33,6 @@ export default {
 :root {
   --main-color: #40362D;
   --bg-color: #F0E8E0;
-
-  --mobile-breakpoint: 600px;
-  --tablet-breakpoint: 904px;
-  --desktop-breakpoint: 905px;
 }
 
 .dark-mode {

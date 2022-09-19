@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .home {
   width: 100%;
   flex: 1;
@@ -64,10 +64,23 @@ export default {
   letter-spacing: 0.25px;
 }
 
+.home ul {
+  display: flex;
+  flex-direction: column;
+}
+
 .home li {
   font-size: 2rem;
   padding: 0.8rem 0;
   letter-spacing: 0.15px;
+}
+
+.home li a {
+  transition: 0.2s;
+}
+
+.home li:hover a {
+  color: #A2917E;
 }
 
 .bubble {
@@ -99,6 +112,29 @@ export default {
 
   .home li {
     font-size: 40px;
+  }
+}
+
+@media only screen and (min-width: 905px) {
+  .home ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .home li {
+    margin: 0 64px;
+    padding: 0;
+    position: relative;
+  }
+
+  .home li:nth-child(n+2)::before {
+    width: 1px;
+    height: 32px;
+    border-left: 1px solid var(--main-color);
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -64px;
   }
 }
 </style>
