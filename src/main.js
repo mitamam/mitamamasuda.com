@@ -13,15 +13,12 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-/* import v-scroll-lock */
-import VScrollLock from 'v-scroll-lock'
-
 /* add icons to the library */
 library.add(faGithub)
 library.add(faTwitter)
 library.add(faLinkedin)
 
 createApp(App)
-.use(router, VScrollLock)
+.use(router)
 .component('font-awesome-icon', FontAwesomeIcon)
 .mount('#app')

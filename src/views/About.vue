@@ -6,12 +6,26 @@
         <div class="about-img"><img src="../assets/about_img.jpg"></div>
         <div class="about-text">
           <h3>Mitama Masuda</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharet
-            ratellus et sollicitudin suscipit. Pellentesque vel consectetur sem, sed
-            eleifend risus.In posuere volutpat ante. Morbi non leo massa. Maecenas d
-            ignissim nibh nisl, in consequat lacus finibus ornare. Aliquam diam leo,
-            tincidunt ac metus ac, lacinia ullamcorper nisl.Donec maximus tortor a 
-            tortor vulputate dapibus.</p>
+          <p>
+            2001年群馬県生まれ。東京都在住。<br><br>
+            都内の大学に在学中に42Tokyoに入学し、<br>
+            プログラミングの楽しさに目覚める。<br>
+            その後42Tokyoでコンピューターサイエンスの基礎を学び、複数のインターンに参加。<br><br>
+            環境問題に強い関心があり、環境に優しい開発をモットーに、環境問題の解決に役立つプロダクトの開発や環境負荷の少ないシステム設計を目指している。
+          </p>
+          <p>
+            Born in 2001 in Gunma, Japan.<br>
+            Lives in Tokyo.<br>
+            I enrolled in 42 Tokyo in 2021,<br>
+            and discovered the joy of programming.<br>
+            After that, I learned the basics of computer science and participated in several internships.<br>
+            I have a strong interest in environmental issues and aim to develop products that help solve such problems.<br>
+            I develop design systems with less environmental impact, based on environmentally friendly development.
+          </p>
+          <h6>Skills</h6>
+          <p>C, C++, Python, HTML, CSS, Vue.js</p>
+          <h6>Tools</h6>
+          <p>Git, VSCode, Unix, Linux, Virtual Box, Figma</p>
         </div>
       </div>
     </div>
@@ -63,6 +77,12 @@ export default {
 .about p {
   font-size: 14px;
   letter-spacing: 0.25px;
+  margin-bottom: 32px;
+}
+
+.about h6 {
+  font-size: 16px;
+  margin-bottom: 8px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -89,15 +109,15 @@ export default {
 
   .about h3 {
     font-size: 32px;
-    margin: 32px 0;
   }
 
-  .about p {
-    font-size: 16px;
-  }
 }
 
 @media only screen and (min-width: 905px) {
+  .about p {
+    font-size: 16px;
+  }
+
   .about h3 {
     font-size: 40px;
   }

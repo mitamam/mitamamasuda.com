@@ -79,7 +79,7 @@ export default {
   transition: 0.2s;
 }
 
-.home li:hover a {
+.home li a:hover {
   color: #A2917E;
 }
 

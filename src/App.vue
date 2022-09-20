@@ -1,7 +1,13 @@
 <template>
-  <loading v-show="loading"></loading>
+  <transition mode="out-in">
+    <loading v-if="loading"></loading>
+  </transition>
   <global-header/>
-  <router-view/>
+  <router-view v-slot="{ Component }">
+    <transition name="fade" mode="out-in">
+      <component :is="Component" />
+    </transition>
+  </router-view>
   <global-footer/>
 </template>
 
@@ -91,6 +97,28 @@ h2 {
 
 p {
   font-family: 'Lato', sans-serif;
+}
+
+/* Page transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .3s ease-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Loading transition */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity .8s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 
 @media only screen and (min-width: 600px) {
