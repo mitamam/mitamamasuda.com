@@ -7,30 +7,17 @@
       </div>
       <ul>
         <li>
-          <h4>Ecroute</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ph
-            aretra tellus et sollicitudin suscipit. Pellentesque vel consectetur
-             sem, sed eleifend risus.</p>
+          <h4>My Personal Website</h4>
+          <p>Built by myself using Vue.js, HTML, CSS, and Firebase.</p>
           <div class="github-link">
-            <a href="https://github.com/mitamam/"><font-awesome-icon class="fa-github" icon="fa-brands fa-github" /></a>
+            <a href="https://github.com/mitamam/mitamamasuda.com/"><font-awesome-icon class="fa-github" icon="fa-brands fa-github" /></a>
           </div>
         </li>
         <li>
-          <h4>Ecroute</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ph
-            aretra tellus et sollicitudin suscipit. Pellentesque vel consectetur
-             sem, sed eleifend risus.</p>
+          <h4>Product demand visualization in Mercari</h4>
+          <p>This feature visualizes the demand for products bought and sold on the flea market app Mercari. We developed this feature in Hackweek of Build@mercari 2022.</p>
           <div class="github-link">
-            <a href="https://github.com/mitamam/"><font-awesome-icon class="fa-github" icon="fa-brands fa-github" /></a>
-          </div>
-        </li>
-        <li>
-          <h4>Ecroute</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ph
-            aretra tellus et sollicitudin suscipit. Pellentesque vel consectetur
-             sem, sed eleifend risus.</p>
-          <div class="github-link">
-            <a href="https://github.com/mitamam/"><font-awesome-icon class="fa-github" icon="fa-brands fa-github" /></a>
+            <a href="https://github.com/mitamam/Team3/"><font-awesome-icon class="fa-github" icon="fa-brands fa-github" /></a>
           </div>
         </li>
       </ul>
@@ -80,12 +67,14 @@ export default {
 }
 
 .work li {
+  width: 100%;
   padding: 1rem;
   border: 1px solid var(--main-color);
+  position: relative;
 }
 
 .work li > h4 {
-  font-size: 1.5rem;
+  font-size: 20px;
   letter-spacing: 1px;
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -101,6 +90,9 @@ export default {
 }
 
 .work .github-link {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
   text-align: right;
 }
 
@@ -123,7 +115,7 @@ export default {
   }
 
   .work li > h4 {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .work li > p {
