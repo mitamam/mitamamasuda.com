@@ -87,40 +87,6 @@ export default {
   margin-bottom: 8px;
 }
 
-<!-- HTML !-->
-<button class="button-48" role="button"><span class="text">Button 48</span></button>
-
-/* CSS */
-.button-48 {
-  appearance: none;
-  background-color: #FFFFFF;
-  border-width: 0;
-  box-sizing: border-box;
-  color: #000000;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Clarkson,Helvetica,sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1em;
-  margin: 0;
-  opacity: 1;
-  outline: 0;
-  padding: 1.5em 2.2em;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  text-rendering: geometricprecision;
-  text-transform: uppercase;
-  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-  white-space: nowrap;
-}
-
 .about .resume-btn {
   position: relative;
   display: inline-block;
