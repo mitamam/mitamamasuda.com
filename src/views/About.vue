@@ -26,6 +26,8 @@
           <p>C, C++, Python, HTML, CSS, Vue.js</p>
           <h6>Tools</h6>
           <p>Git, VSCode, Unix, Linux, Virtual Box, Figma</p>
+          <a class="resume-btn" href="./mitama_masuda_resume(english).pdf" target="_blank"><span>ENGLISH RESUME</span></a>
+          <a class="resume-btn" href="./mitama_masuda_resume(japanese).pdf" target="_blank"><span>JAPANESE RESUME</span></a>
         </div>
       </div>
     </div>
@@ -83,6 +85,58 @@ export default {
 .about h6 {
   font-size: 16px;
   margin-bottom: 8px;
+}
+
+.about .resume-btn {
+  position: relative;
+  display: inline-block;
+  border: 1px solid var(--main-color);
+  background: var(--bg-color);
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  touch-action: manipulation;
+  text-rendering: geometricprecision;
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+}
+
+.about .resume-btn:first-of-type {
+  margin-right: 16px;
+}
+
+.about .resume-btn:before {
+  animation: opacityFallbackOut .5s step-end forwards;
+  backface-visibility: hidden;
+  background-color: var(--main-color);
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+  width: 100%;
+}
+
+.resume-btn:hover {
+  color: var(--bg-color);
+}
+
+.resume-btn:hover:before {
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.resume-btn:after {
+  background-color: #FFFFFF;
+}
+
+.resume-btn span {
+  z-index: 1;
+  position: relative;
 }
 
 @media only screen and (min-width: 600px) {
