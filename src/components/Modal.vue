@@ -18,9 +18,13 @@
       <a href="https://github.com/mitamam/mitamamasuda.com/"><font-awesome-icon icon="fa-brands fa-github" /></a>
     </li>
   </ul>
-  <div class="switch">
+  <div class="dark-mode-toggler">
+    <input type="checkbox" @click="toggleDarkMode"/>
+    <img src="../assets/moon.svg" alt="dark">
+  </div>
+  <div class="dark-mode-switch">
     <div class="switch-icon sun"><img src="../assets/sun.svg" alt="light"></div>
-    <input type="checkbox" id="dark-mode-toggle">
+    <input type="checkbox" id="dark-mode-toggle" @click="toggleDarkMode">
     <label for="dark-mode-toggle"></label>
     <div class="switch-icon moon"><img src="../assets/moon.svg" alt="dark"></div>
   </div>
@@ -35,6 +39,7 @@ export default {
   data() {
     return {
       modal: null,
+      darkMode: false
     }
   },
   mounted() {
@@ -55,6 +60,17 @@ export default {
     closeModal() {
       enableBodyScroll(this.modal)
       this.$emit('pageTransition' , this.isopen)
+    },
+    toggleDarkMode() {
+      if (this.darkMode == true) {
+        document.body.classList.remove('dark-mode')
+        this.darkMode = false
+      }
+      else {
+        document.body.classList.add('dark-mode')
+        this.darkMode = true
+      }
+      this.closeModal()
     }
   }
 }
@@ -70,7 +86,7 @@ export default {
   padding-top: 48px;
   right: -32px;
   
-  background: var(--main-color);
+  background: #40362D;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -101,32 +117,13 @@ export default {
   position: relative;
 }
 
-.header-menu-item::before {
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background: currentColor;
-  top: 100%;
-  left: 0;
-  pointer-events: none;
-  content: '';
-  transform-origin: 100% 50%;
-  transform: scale3d(0, 1, 1);
-  transition: transform 0.3s;
-}
-
-.header-menu-item:hover::before {
-  transform-origin: 0% 50%;
-  transform: scale3d(1, 1, 1);
-}
-
-.header-menu-item:hover {
-  --d: 100%;
-}
-
 .header-menu-item a {
   transition: color 0.3s ease;
-  color: var(--bg-color);
+  color: #F0E8E0;
+}
+
+.header-menu-item a:hover {
+  color: #A2917E;
 }
 
 .sns-link {
@@ -137,11 +134,48 @@ export default {
 }
 
 .sns-link a {
+  display: block;
+  margin-top: 2px;
   font-size: 18px;
-  color: var(--bg-color);
+  color: #F0E8E0;
 }
 
-/* Dark mode switch */
+/* Dark mode toggler (desktop) */
+.dark-mode-toggler {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-left: 24px;
+}
+
+.dark-mode-toggler input {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 5;
+  opacity: 0;
+}
+
+.dark-mode-toggler img {
+  margin: 0 auto;
+  filter: invert(18%) sepia(18%) saturate(610%) hue-rotate(347deg)
+    brightness(98%) contrast(88%);
+}
+
+.dark-mode-toggler input:checked + img {
+  margin-top: 2px;
+  content: url(../assets/sun.svg);
+  width: 16px;
+  height: 16px;
+  filter: invert(98%) sepia(4%) saturate(4857%) 
+    hue-rotate(296deg) brightness(116%) contrast(86%);
+}
+
+/* Dark mode switch (mobile) */
 #dark-mode-toggle {
   display: none;
 }
@@ -188,7 +222,7 @@ export default {
   background: #F0E8E0;
 }
 
-.switch {
+.dark-mode-switch {
   display: flex;
   align-items: center;
   gap: 0 0.5rem;
@@ -246,6 +280,29 @@ export default {
   .header-menu-item:first-child {
     display: none;
   }
+
+  .header-menu-item::before {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: var(--main-color);
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+    content: '';
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+  }
+
+  .header-menu-item:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+  }
+
+  .header-menu-item:hover {
+    --d: 100%;
+  }
   
   .sns-link {
     margin: 0;
@@ -256,7 +313,11 @@ export default {
     color: var(--main-color);
   }
 
-  .switch {
+  .dark-mode-toggler {
+    display: block;
+  }
+
+  .dark-mode-switch {
     display: none;
     margin: 0;
   }

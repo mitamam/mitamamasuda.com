@@ -8,7 +8,7 @@
             <h5>My Links</h5>
             <ul>
               <li><span></span><a href="https://twitter.com/AuClairDeLune3" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-              <li><span></span><a href="linkedin.com/in/mitama-masuda-3a5453238" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><span></span><a href="https://jp.linkedin.com/in/mitama-masuda-3a5453238" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
               <li><span></span><a href="https://github.com/mitamam/" target="_blank" rel="noopener noreferrer">Github</a></li>
             </ul>
             <h5>Email</h5>

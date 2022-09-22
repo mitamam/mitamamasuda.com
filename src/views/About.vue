@@ -26,8 +26,10 @@
           <p>C, C++, Python, HTML, CSS, Vue.js</p>
           <h6>Tools</h6>
           <p>Git, VSCode, Unix, Linux, Virtual Box, Figma</p>
-          <a class="resume-btn" href="./mitama_masuda_resume(english).pdf" target="_blank"><span>ENGLISH RESUME</span></a>
-          <a class="resume-btn" href="./mitama_masuda_resume(japanese).pdf" target="_blank"><span>JAPANESE RESUME</span></a>
+          <div class="resume">
+            <a class="resume-btn" href="./mitama_masuda_resume(english).pdf" target="_blank"><span>ENGLISH RESUME</span></a>
+            <a class="resume-btn" href="./mitama_masuda_resume(japanese).pdf" target="_blank"><span>JAPANESE RESUME</span></a>
+          </div>
         </div>
       </div>
     </div>
@@ -87,6 +89,11 @@ export default {
   margin-bottom: 8px;
 }
 
+.about .resume {
+  display: flex;
+  gap: 16px;
+}
+
 .about .resume-btn {
   position: relative;
   display: inline-block;
@@ -100,10 +107,6 @@ export default {
   touch-action: manipulation;
   text-rendering: geometricprecision;
   transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
-}
-
-.about .resume-btn:first-of-type {
-  margin-right: 16px;
 }
 
 .about .resume-btn:before {
