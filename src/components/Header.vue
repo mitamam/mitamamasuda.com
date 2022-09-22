@@ -53,6 +53,10 @@ export default {
   margin-top: 24px;
 }
 
+body.dark-mode .header .logo {
+  content: url(../assets/logo_light.svg);
+}
+
 .hamburger {
   position: absolute;
   top: 72px;
@@ -62,7 +66,7 @@ export default {
   user-select: none;
 }
 
-.hamburger input {
+.hamburger > input {
   display: block;
   width: 40px;
   height: 32px;
@@ -112,17 +116,17 @@ export default {
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-.hamburger input:checked ~ span
+.hamburger > input:checked ~ span
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: var(--bg-color);
+  background: #F0E8E0;
 }
 
 /*
  * But let's hide the middle one.
  */
-.hamburger input:checked ~ span:nth-last-child(3)
+.hamburger > input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
@@ -131,7 +135,7 @@ export default {
 /*
  * Ohyeah and the last one should go the other direction
  */
-.hamburger input:checked ~ span:nth-last-child(2)
+.hamburger > input:checked ~ span:nth-last-child(2)
 {
   opacity: 1;
   transform: rotate(-45deg) translate(0, -1px);
@@ -142,7 +146,7 @@ export default {
     position: static;
   }
 
-  .hamburger input {
+  .hamburger > input {
     display: none;
   }
 

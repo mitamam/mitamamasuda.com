@@ -41,7 +41,7 @@ export default {
   --bg-color: #F0E8E0;
 }
 
-.dark-mode {
+body.dark-mode {
   --main-color: #F0E8E0;
   --bg-color: #40362D;
 }

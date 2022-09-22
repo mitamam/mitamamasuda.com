@@ -52,6 +52,13 @@ export default {
   width: 100%;
   height: 100%;
   display: inline-block;
+  filter: invert(18%) sepia(18%) saturate(610%) hue-rotate(347deg)
+    brightness(98%) contrast(88%);
+}
+
+body.dark-mode .home .subheading > img {
+  filter: invert(98%) sepia(4%) saturate(4857%) 
+    hue-rotate(296deg) brightness(116%) contrast(86%);
 }
 
 .home p {
