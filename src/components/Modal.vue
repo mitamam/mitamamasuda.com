@@ -9,13 +9,13 @@
   </ul>
   <ul class="sns-link">
     <li>
-      <a href="https://twitter.com/AuClairDeLune3"><font-awesome-icon icon="fa-brands fa-twitter" /></a>
+      <a href="https://twitter.com/AuClairDeLune3" target="_blank" rel="noopener noreferrer"><font-awesome-icon icon="fa-brands fa-twitter" /></a>
     </li>
     <li>
-      <a href="https://jp.linkedin.com/in/mitama-masuda-3a5453238"><font-awesome-icon icon="fa-brands fa-linkedin" /></a>
+      <a href="https://jp.linkedin.com/in/mitama-masuda-3a5453238" target="_blank" rel="noopener noreferrer"><font-awesome-icon icon="fa-brands fa-linkedin" /></a>
     </li>
     <li>
-      <a href="https://github.com/mitamam/mitamamasuda.com/"><font-awesome-icon icon="fa-brands fa-github" /></a>
+      <a href="https://github.com/mitamam/mitamamasuda.com/" target="_blank" rel="noopener noreferrer"><font-awesome-icon icon="fa-brands fa-github" /></a>
     </li>
   </ul>
   <div class="dark-mode-toggler">
