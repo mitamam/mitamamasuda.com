@@ -10,14 +10,14 @@
           <h4>My Personal Website</h4>
           <p>Built by myself using Vue.js, HTML, CSS, and Firebase.</p>
           <div class="github-link">
-            <a href="https://github.com/mitamam/mitamamasuda.com/"><font-awesome-icon class="fa-github" icon="fa-brands fa-github" /></a>
+            <a href="https://github.com/mitamam/mitamamasuda.com/" target="_blank" rel="noopener noreferrer"><font-awesome-icon class="fa-github" icon="fa-brands fa-github" /></a>
           </div>
         </li>
         <li>
           <h4>Product demand visualization in Mercari</h4>
           <p>This feature visualizes the demand for products bought and sold on the flea market app Mercari. We developed this feature in Hackweek of Build@mercari 2022.</p>
           <div class="github-link">
-            <a href="https://github.com/mitamam/Team3/"><font-awesome-icon class="fa-github" icon="fa-brands fa-github" /></a>
+            <a href="https://github.com/mitamam/Team3/" target="_blank" rel="noopener noreferrer"><font-awesome-icon class="fa-github" icon="fa-brands fa-github" /></a>
           </div>
         </li>
       </ul>
@@ -68,20 +68,20 @@ export default {
 
 .work li {
   width: 100%;
-  padding: 1rem;
+  padding: 16px;
   border: 1px solid var(--main-color);
   position: relative;
 }
 
 .work li > h4 {
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 1px;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 12px;
 }
 
 .work li > p {
-  font-size: 14px;
+  font-size: 12px;
   max-width: calc(100% - 3rem);
 }
 
@@ -89,15 +89,14 @@ export default {
   margin-bottom: 0;
 }
 
+
 .work .github-link {
   position: absolute;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 24px;
+  right: 24px;
   text-align: right;
-}
-
-.work .fa-github {
-  font-size: 1.5rem;
+  line-height: 1;
+  font-size: 24px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -110,16 +109,17 @@ export default {
   }
 
   .work li {
+    padding: 24px;
     max-width: 560px;
     margin: 0 auto;
   }
 
   .work li > h4 {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .work li > p {
-    font-size: 16px;
+  font-size: 14px;
   }
 }
 

@@ -53,8 +53,12 @@ export default {
   margin-top: 24px;
 }
 
-body.dark-mode .header .logo {
+body.dark-mode .header .logo img {
   content: url(../assets/logo_light.svg);
+}
+
+body.dark-mode .header .logo a {
+  z-index: 5;
 }
 
 .hamburger {

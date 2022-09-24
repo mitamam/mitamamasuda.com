@@ -13,7 +13,6 @@
 <style>
 .footer {
   width: 100%;
-  height: 50px;
 }
 
 .footer .container {
@@ -24,7 +23,7 @@
 
 .footer span {
   display: block;
-  width: 4rem;
+  width: 3rem;
   height: 1px;
   background-color: var(--main-color);
   margin-right: 0.5rem;
@@ -33,7 +32,7 @@
 .footer p {
   font-family: 'Cormorant', serif;
   letter-spacing: 1.25px;
-  font-size: 0.6rem;
+  font-size: 14px;
   color: var(--main-color);
 }
 </style>

@@ -275,6 +275,7 @@ export default {
 
   .header-menu-item {
     padding: 0;
+    font-size: 20px;
   }
 
   .header-menu-item:first-child {

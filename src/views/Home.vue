@@ -24,18 +24,18 @@ export default {
 
 <style scoped>
 .home {
-  width: 100%;
   flex: 1;
+  width: 100%;
 }
 
 .home .container {
   color: var(--main-color);
-  padding: 80px 0;
+  padding: 40px 0;
   text-align: center;
 }
 
 .home h1 {
-  font-size: 2.5rem;
+  font-size: 48px;
   letter-spacing: 0.25px;
   font-weight: normal;
   z-index: 0;
@@ -44,7 +44,7 @@ export default {
 .home .subheading {
   width: 14rem;
   margin: 0 auto;
-  margin-top: -1.8rem;
+  margin-top: -1.4rem;
   z-index: 1;
 }
 
@@ -62,7 +62,7 @@ body.dark-mode .home .subheading > img {
 }
 
 .home p {
-  font-size: 0.85rem;
+  font-size: 12px;
   font-family: 'Cormorant', serif;
 }
 
@@ -95,9 +95,9 @@ body.dark-mode .home .subheading > img {
   z-index: 2;
   bottom: 2rem;
   right: 2rem;
-  width: 4.3rem;
-  height: 4.3rem;
-  padding: .8rem .4rem;
+  width: 70px;
+  height: 70px;
+  padding: 12px 4px;
   border: 1px solid var(--main-color);
   border-radius: 50%;
   display: flex;
@@ -106,19 +106,40 @@ body.dark-mode .home .subheading > img {
 }
 
 .bubble p {
-  font-size: 0.6rem;
+  font-size: 10px;
   letter-spacing: 1px;
   font-weight: bold;
   font-family: 'Cormorant', serif;
 }
 
 @media only screen and (min-width: 600px) {
+  .home .container {
+    padding: 80px 0;
+  }
+
+  .home h1 {
+    font-size: 2rem;
+  }
+
   .home .subheading {
-    width: 18rem;
+    width: 14rem;
+  }
+
+  .home p {
+    font-size: 0.5rem;
   }
 
   .home li {
-    font-size: 40px;
+    font-size: 36px;
+  }
+
+  .bubble {
+    width: 100px;
+    height: 100px;
+  }
+
+  .bubble p {
+    font-size: 14px;
   }
 }
 
