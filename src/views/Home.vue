@@ -136,6 +136,7 @@ body.dark-mode .home .subheading > img {
   .bubble {
     width: 100px;
     height: 100px;
+    padding: 16px 12px;
   }
 
   .bubble p {
