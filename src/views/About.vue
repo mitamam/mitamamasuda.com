@@ -7,14 +7,14 @@
         <div class="about-text">
           <h3>Mitama Masuda</h3>
           <p>
-            2001年群馬県生まれ。東京都在住。<br><br>
+            2001年生まれ。東京都在住。<br><br>
             都内の大学に在学中に42Tokyoに入学し、<br>
             プログラミングの楽しさに目覚める。<br>
             その後42Tokyoでコンピューターサイエンスの基礎を学び、複数のインターンに参加。<br><br>
             環境問題に強い関心があり、環境に優しい開発をモットーに、環境問題の解決に役立つプロダクトの開発や環境負荷の少ないシステム設計を目指している。
           </p>
           <p>
-            Born in 2001 in Gunma, Japan.<br>
+            Born in 2001,<br>
             Lives in Tokyo.<br>
             I enrolled in 42 Tokyo in 2021,<br>
             and discovered the joy of programming.<br>
