@@ -61,7 +61,7 @@ export default {
 .about .about-img {
   margin: 0 auto;
   padding: 0 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 48px;
   max-width: 400px;
   height: 100%;
   text-align: center;
@@ -82,6 +82,7 @@ export default {
   font-size: 14px;
   letter-spacing: 0.25px;
   margin-bottom: 32px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .about h6 {
@@ -165,7 +166,11 @@ export default {
   }
 
   .about h3 {
-    font-size: 32px;
+    font-size: 24px;
+  }
+
+  .about p {
+    font-size: 14px;
   }
 
 }
@@ -176,7 +181,11 @@ export default {
   }
 
   .about h3 {
-    font-size: 40px;
+    font-size: 28px;
+  }
+
+  .about h6 {
+    font-size: 20px;
   }
 
   .about .about-content {

@@ -89,7 +89,7 @@ body {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 36px;
   letter-spacing: 0.25px;
   font-weight: normal;
   margin-bottom: 32px;
@@ -139,7 +139,7 @@ p {
   }
 
   h2 {
-    font-size: 64px;
+    font-size: 56px;
     margin-bottom: 64px;
   }
 }

@@ -44,6 +44,7 @@ export default {
 
 .contact .contact-img {
   max-width: 320px;
+  padding: 0 32px;
   margin: 0 auto;
 }
 
@@ -53,9 +54,9 @@ export default {
 }
 
 .contact h5 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: normal;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .contact ul {
@@ -64,7 +65,7 @@ export default {
 
 .contact li {
   display: flex;
-  padding: 0.5rem 0;
+  padding-bottom: 16px;
   align-items: center;
 }
 
@@ -78,9 +79,14 @@ export default {
   font-size: 14px;
   font-family: 'Lato', sans-serif;
   margin-left: 1rem;
+  display: block;
 }
 
 @media only screen and (min-width: 600px) {
+  .contact h2 {
+    margin-bottom: 0;
+  }
+
   .contact .container {
     padding: 64px 0;
   }
