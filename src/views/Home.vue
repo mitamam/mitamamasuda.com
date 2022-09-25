@@ -10,7 +10,7 @@
         <li><router-link to="/contact">CONTACT</router-link></li>
       </ul>
       <div class="bubble">
-        <p>This website emits 0.49g of CO2</p>
+        <p>This website emits 0.1g of CO2</p>
       </div>
     </div>
   </div>
