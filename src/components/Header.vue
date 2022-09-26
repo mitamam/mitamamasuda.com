@@ -7,14 +7,14 @@
         <span></span>
         <span></span>
         <span></span>
-        <Modal :open=open @pageTransition="toggleMenu"></Modal>
       </div>
+      <Menu :open=open @pageTransition="toggleMenu"></Menu>
     </div>
   </div>
 </template>
 
 <script>
-import Modal from '@/components/Modal.vue'
+import Menu from '@/components/Menu.vue'
 
 export default {
     name: "GlobalHeader",
@@ -24,7 +24,7 @@ export default {
       }
     },
     components: {
-      Modal
+      Menu
     },
     methods: {
       toggleMenu() {
@@ -41,7 +41,6 @@ export default {
 .header {
   width: 100%;
   z-index: 3;
-  overflow-x: hidden;
 }
 
 .header .container {
@@ -65,9 +64,10 @@ body.dark-mode .header .logo a {
   position: absolute;
   top: 72px;
   right: 32px;
-  z-index: 1;
+  z-index: 21;
   -webkit-user-select: none;
   user-select: none;
+  transform: translateZ(0);
 }
 
 .hamburger > input {
@@ -81,7 +81,7 @@ body.dark-mode .header .logo a {
   cursor: pointer;
   
   opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  z-index: 23; /* and place it over the hamburger */
   
   -webkit-touch-callout: none;
 }
@@ -97,7 +97,7 @@ body.dark-mode .header .logo a {
   background: var(--main-color);
   border-radius: 3px;
   
-  z-index: 1;
+  z-index: 22;
   
   transform-origin: 4px 0px;
   
@@ -106,12 +106,12 @@ body.dark-mode .header .logo a {
               opacity 0.55s ease;
 }
 
-.hamburger span:first-child
+.hamburger span:nth-of-type(1)
 {
   transform-origin: 0% 0%;
 }
 
-.hamburger span:nth-last-child(2)
+.hamburger span:nth-of-type(3)
 {
   transform-origin: 0% 100%;
 }
@@ -120,17 +120,17 @@ body.dark-mode .header .logo a {
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-.hamburger > input:checked ~ span
+.hamburger > input:checked ~ span:nth-of-type(1)
 {
   opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
+  transform: rotate(45deg) translate(-3px, -2px);
   background: #F0E8E0;
 }
 
 /*
  * But let's hide the middle one.
  */
-.hamburger > input:checked ~ span:nth-last-child(3)
+.hamburger > input:checked ~ span:nth-of-type(2)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
@@ -139,10 +139,11 @@ body.dark-mode .header .logo a {
 /*
  * Ohyeah and the last one should go the other direction
  */
-.hamburger > input:checked ~ span:nth-last-child(2)
+.hamburger > input:checked ~ span:nth-of-type(3)
 {
   opacity: 1;
-  transform: rotate(-45deg) translate(0, -1px);
+  background: #F0E8E0;
+  transform: rotate(-45deg) translate(-1px, 0px);
 }
 
 @media screen and (min-width: 600px) {

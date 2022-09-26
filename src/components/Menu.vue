@@ -1,11 +1,11 @@
 <template>
-<div class="modal" v-bind:class="{isopen: open}">
+<div class="menu" v-bind:class="{isopen: open}">
   <div class="logo-light"><img src="../assets/logo_light.svg" alt="MITAMA MASUDA"></div>
   <ul  class="header-menu" :class="{'on-home-page': $route.path === '/'}">
-    <li class="header-menu-item"><router-link to="/" @click="closeModal">Home</router-link></li>
-    <li class="header-menu-item"><router-link to="/about" @click="closeModal">About</router-link></li>
-    <li class="header-menu-item"><router-link to="/work" @click="closeModal">Work</router-link></li>
-    <li class="header-menu-item"><router-link to="/contact" @click="closeModal">Contact</router-link></li>
+    <li class="header-menu-item"><router-link to="/" @click="closeMenu">Home</router-link></li>
+    <li class="header-menu-item"><router-link to="/about" @click="closeMenu">About</router-link></li>
+    <li class="header-menu-item"><router-link to="/work" @click="closeMenu">Work</router-link></li>
+    <li class="header-menu-item"><router-link to="/contact" @click="closeMenu">Contact</router-link></li>
   </ul>
   <ul class="sns-link">
     <li>
@@ -34,16 +34,16 @@
 <script>
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 export default {
-  name: 'Modal',
+  name: 'Menu',
   props: { open: Boolean },
   data() {
     return {
-      modal: null,
+      menu: null,
       darkMode: false
     }
   },
   mounted() {
-    this.modal = document.querySelector('.modal')
+    this.menu = document.querySelector('.menu')
   },
   beforeUnmount() {
     clearAllBodyScrollLocks()
@@ -51,14 +51,14 @@ export default {
   watch: {
     open (isopen) {
       if (isopen == true)
-        disableBodyScroll(this.modal)
+        disableBodyScroll(this.menu)
       else
-        enableBodyScroll(this.modal)
+        enableBodyScroll(this.menu)
     }
   },
   methods: {
-    closeModal() {
-      enableBodyScroll(this.modal)
+    closeMenu() {
+      enableBodyScroll(this.menu)
       this.$emit('pageTransition' , this.isopen)
     },
     toggleDarkMode() {
@@ -70,36 +70,36 @@ export default {
         document.body.classList.add('dark-mode')
         this.darkMode = true
       }
-      this.closeModal()
+      this.closeMenu()
     }
   }
 }
 </script>
 
 <style>
-.modal {
-  position: absolute;
+.menu {
+  position: fixed;
   width: 100vw;
   height: 100vh;
-  margin: -99px 0 0 0;
+  top: 0;
+  right: 0;
+  margin: 0;
   padding: 32px;
   padding-top: 48px;
-  right: -32px;
+  z-index: 20;
   
   background: #40362D;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(100%, 0);
+  transform: translateX(100%);
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
-.modal.isopen
+.menu.isopen
 {
-  transform: none;
+  transform: translateX(0);
   opacity: 1;
 }
 
@@ -248,7 +248,7 @@ export default {
 /* /Dark mode switch */
 
 @media screen and (min-width: 600px) {
-  .modal {
+  .menu {
     background-color: transparent;
     transform: none;
     transition: none;
