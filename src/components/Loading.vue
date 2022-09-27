@@ -38,7 +38,7 @@ export default {
  width: max-content;
  font-size: 18px;
  font-weight: 600;
- font-family: monospace;
+ font-family: 'Cormorant', serif;
  letter-spacing: 1em;
  color: #f5f5f5;
  filter: drop-shadow(0 0 10px);

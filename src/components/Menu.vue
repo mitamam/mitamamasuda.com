@@ -91,7 +91,6 @@ export default {
   background: #40362D;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
   transform: translateX(100%);
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
