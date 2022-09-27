@@ -1,24 +1,11 @@
-# my-portfolio
+# My Personal Website
 
-## Project setup
+This site was developed using HTML, CSS and Vue.js.
+
+## Getting Started
 ```
+git clone https://github.com/mitamam/mitamamasuda.com
+cd mitamamasuda.com
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
