@@ -80,8 +80,8 @@ body.dark-mode .header .logo a {
   
   cursor: pointer;
   
-  opacity: 0; /* hide this */
-  z-index: 23; /* and place it over the hamburger */
+  opacity: 0;
+  z-index: 23;
   
   -webkit-touch-callout: none;
 }
@@ -116,10 +116,6 @@ body.dark-mode .header .logo a {
   transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
 .hamburger > input:checked ~ span:nth-of-type(1)
 {
   opacity: 1;
@@ -127,18 +123,12 @@ body.dark-mode .header .logo a {
   background: #F0E8E0;
 }
 
-/*
- * But let's hide the middle one.
- */
 .hamburger > input:checked ~ span:nth-of-type(2)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
 .hamburger > input:checked ~ span:nth-of-type(3)
 {
   opacity: 1;
