@@ -20,6 +20,13 @@
             <a href="https://github.com/mitamam/Team3/" target="_blank" rel="noopener noreferrer"><font-awesome-icon class="fa-github" icon="fa-brands fa-github" /></a>
           </div>
         </li>
+        <li>
+          <h4>My Memo App</h4>
+          <p>CRUD memo application created for Django practice.</p>
+          <div class="github-link">
+            <a href="https://github.com/mitamam/my_memo_app/" target="_blank" rel="noopener noreferrer"><font-awesome-icon class="fa-github" icon="fa-brands fa-github" /></a>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
