@@ -2,7 +2,7 @@
   <div class="home">
     <div class="container">
       <h1>MITAMA MASUDA</h1>
-      <div class="subheading"><img src="../assets/software_engineer.svg" alt="software engineer"></div>
+      <div class="subheading"><img src="../assets/software_developer.svg" alt="software engineer"></div>
       <p>I believe digital technology can solve big problems.</p>
       <ul>
         <li><router-link to="/about">ABOUT</router-link></li>
@@ -42,9 +42,9 @@ export default {
 }
 
 .home .subheading {
-  width: 14rem;
+  width: 16rem;
   margin: 0 auto;
-  margin-top: -1.4rem;
+  margin-top: -1.2rem;
   z-index: 1;
 }
 
@@ -67,6 +67,7 @@ body.dark-mode .home .subheading > img {
 }
 
 .home .subheading + p {
+  font-style: italic;
   margin-bottom: 3rem;
   letter-spacing: 0.25px;
 }
@@ -114,7 +115,7 @@ body.dark-mode .home .subheading > img {
 
 @media only screen and (min-width: 600px) {
   .home .container {
-    padding: 80px 0;
+    padding: 120px 0;
   }
 
   .home h1 {
@@ -122,11 +123,11 @@ body.dark-mode .home .subheading > img {
   }
 
   .home .subheading {
-    width: 14rem;
+    width: 13rem;
   }
 
   .home p {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
   }
 
   .home li {
